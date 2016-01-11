@@ -1,0 +1,28 @@
+body{
+	margin-top: 70px;
+}
+.about{
+	margin-top: 20px;
+	background: white;
+	border-radius: 5px;
+	box-shadow: 10px 5px 5px #888888
+}
+.completed, .notcompleted{
+	margin-top: 20px;
+	background: white;
+	border-radius: 5px;
+}
+.photo{
+	width: 50%;
+}
+*, p {
+	color: #505050;
+}
+
+.item{
+	background: #cccccc;
+	width: 50%;
+	text-align: center;
+	border: 1px solid #888888;
+	border-radius: 5px;
+}

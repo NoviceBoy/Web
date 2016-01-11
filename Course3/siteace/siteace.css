@@ -1,0 +1,22 @@
+/* CSS declarations go here */
+.hidden_div{
+	display:none;
+}
+
+.signon{
+	padding-top: 15px;
+	text-align: left;
+}
+
+.glyphicon-thumbs-up, .glyphicon-thumbs-down {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+em{
+	padding-left: 15px;
+}
+
+.total{
+	text-align: left
+}

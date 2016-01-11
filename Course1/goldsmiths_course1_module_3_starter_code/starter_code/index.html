@@ -1,0 +1,23 @@
+<html>
+	<head>
+	<script src="jquery.js"></script>
+	<style type="text/css">
+		.image {
+			width: 200px;
+		}
+	</style>
+	</head>
+	<body>
+	<img class='image' src='image02.jpg'/>
+	</body>
+	<script type="text/javascript">
+		$(".image").click(function(){
+			console.log("hello");
+			$(this).attr("src", "image01.jpg")});
+		$(".image").hover(function(){
+    		$(this).attr("src", "image01.jpg");
+    		}, function(){
+    		$(this).attr("src", "image02.jpg");
+		});
+	</script>
+</html>

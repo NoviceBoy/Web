@@ -1,0 +1,110 @@
+<!-- This is a first example of using a template -->
+
+<head>
+
+<!-- include our libraries and css files -->
+
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/handlebars-v3.0.3.js"></script>
+
+<script src="js/bootstrap.min.js"></script>
+<script src="AnimalsData.js"></script>
+<script src="assignment.js"></script>
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="assignment.css" rel="stylesheet">
+
+</head>
+
+<body>
+	<nav id="navbar" class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarcollapsed">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="index.html">Animal Wikipedia</a>
+			</div>
+			<div class="collapse navbar-collapse" id="navbarcollapsed">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="index.html">Home</a></li>
+					<li><a href="About.html">About</a></li>
+				</ul>
+			</div>
+		</div> 
+	</nav>
+	<div class="container">
+		<div class="jumbotron">
+			<div id="crumbs">
+					
+			</div>
+			<div id="content"  class="container-fluid"  role="main">
+
+			</div>
+		</div>
+		<hr>
+		<div class="footer">
+			<h5>&copy; Animal wiki 2015 <h5>
+		</div>
+	</div>
+<script id="crumbs-template" type="text/x-handlebars-template">
+	<ol id="crumbClass" class="breadcrumb">
+		<li><a href="index.html">Home</a></li>
+	</ol>
+</script>
+<script id="species-template" type="text/x-handlebars-template">
+  <div class="row">
+    {{#each category}}
+    <div class="col-xs-12 col-md-4 col-ld-4"> 
+        <div class="species-thumbnail"  data-id="{{@index}}">
+          <img class="img-thumbnail" src="{{animals.0.image1}}" alt="" style="width:100%;height:200px"/> 
+           
+          	<div class="caption">
+              <h5 style="text-align:center">{{name}} </h5>
+              <h6 style="text-align:center">( {{animals.length}} Animals )</h6>
+        	</div>
+        </div>
+    </div> 
+    {{/each}}
+  </div> 
+</script>
+<script id="category-template" type="text/x-handlebars-template">
+  <div class="row">
+    {{#each animals}}
+    <div class="col-xs-12 col-md-3 col-ld-3"> 
+        <div class="category-thumbnail"  data-id="{{@index}}">
+          <img class="img-thumbnail" src="{{image1}}" alt="" style="width:100%;height:200px"/> 
+           
+          <div class="caption">
+              <h5 style="text-align:center">{{name}} </h5>
+          </div>
+         </div>
+    </div> 
+    {{/each}}
+  </div> 
+</script>
+<script id="animal-template" type="text/x-handlebars-template">
+	<div class="row">
+    	<div class="col-xs-12 col-md-6 col-ld-6"> 
+        	<div class="photo-thumbnail"  data-id="{{@index}}">
+          		<img class="img-thumbnail" src="{{image1}}" alt="{{image2}}" style="width:100%;height:200px"/>
+			</div>
+		</div>
+    	<div class="col-xs-12 col-md-6 col-ld-6"> 
+        	<div class="photo-thumbnail"  data-id="{{@index}}">
+          		<img class="img-thumbnail" src="{{image2}}" alt="" style="width:100%;height:200px"/>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="caption">
+			<h2>{{name}}</h2>
+			<p>{{description}}</p>
+ 		</div> 
+	</div> 
+</script>
+
+
+</body>

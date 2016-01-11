@@ -1,0 +1,12 @@
+h1{
+	/* Changes the font type to monospace*/
+	font-family: monospace;
+	/* Badkground color for the heading is red 0xFF0000 ( RGB )*/
+	background-color: #ff0000;
+	/* Font color is blue */
+	color: blue;
+	/* Placing in the center */
+	text-align: center;
+	/* Giving a 1px solid black border*/
+	border: 1px solid black;
+}

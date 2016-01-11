@@ -1,0 +1,28 @@
+h1{
+	/* Changes the font type to monospace*/
+	font-family: monospace;
+	/* Placing in the center */
+	text-align: center;
+	/* Giving a 1px solid black border*/
+	padding: 20px;
+    background: #E6E6FA;
+   	border-radius: 5px;
+}
+
+p{
+	padding: 20px;
+    background: #E6E6FA;
+   	border-radius: 5px;
+   	height: 250px;
+}
+
+button{
+	text-align: center;
+	padding: 10px;
+}
+
+.image {
+	width: 215px;
+	border: 1px solid black;
+}
+

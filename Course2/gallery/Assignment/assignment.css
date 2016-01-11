@@ -1,0 +1,24 @@
+/* put your css code here */
+body{
+	margin-top: 70px;
+}
+
+p{
+	text-align:justify;
+	font-size: large;
+	padding: 20px;
+}
+
+h2{
+	padding-top:20px;
+	padding-left: 20px;
+	text-align: left;
+}
+
+.breadcrumb {
+	background-color: #eeeeee;
+}
+
+a{
+	color: #505050;
+}
