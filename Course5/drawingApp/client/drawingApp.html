@@ -1,0 +1,81 @@
+<head>
+  <title>Draw'n'Save</title>
+</head>
+
+<body>
+  {{> wall}}
+</body>
+
+<template name="wall">
+
+  <h1>{{title}}</h1>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 noborder">
+        <fieldset>
+          <legend>
+            Draw options
+          </legend>
+        <button class='clear btn btn-success'>Clear</button>
+        <button class='js-toggle-website-form btn btn-success'>Save</button><br><br>
+        <div id="website_form" class="hidden_div">
+          <form class="js-save-website-form" id="save-website-form">
+            <div class="form-group">
+              <label for="name">File Name</label>
+              <input type="text" class="form-control" id="name" placeholder="xyz" required><br>
+            <button type="submit" class="btn btn-success">Submit</button>
+            </div>
+          </form>
+        </div>
+        <label for="color">Pick Color: </label>
+        <input type="color" id="color" name="color"> <br><br>
+        <label>Brush Type:</label>
+        <input type="radio" id="line" name="brush" value="line" checked> 
+        <label for="line" class="check">Line</label>
+        <input type="radio" id="circle" name="brush" value="circle"> 
+        <label for="circle" class="check">Circle</label> ( to draw make sure eraser is un-checked )<br><br>
+        <label>Eraser selected:</label>
+        <input type="checkbox" id="eraser" name="eraser"> ( eraser takes the brush shape )<br><br>
+        <label for="thickness"> Brush Thickness: </label><br>
+        <input id="thickness" name="thickness" type="range" min="0" max="20"><br>
+        </fieldset>
+          {{> saved}}
+      </div>
+      <div class="col-sm-6">
+          <legend>
+            Canvas
+          </legend>
+          <div class="border">
+            {{#if Template.subscriptionsReady}}
+              {{> canvas}}
+            {{else}}
+              <label>Loading...</label>
+            {{/if}}
+          </div>
+      </div>
+    </div>
+    {{> footer}}
+  </div>
+</template>
+
+<template name="canvas">
+  <div id='canvas'></div>
+</template>
+
+<template name="footer">
+    <hr>
+    <footer>
+      <p>&copy; Copyright Draw'n'Save</p>
+    </footer>
+</template>
+
+<template name="saved">
+  <fieldset>
+    <legend>
+      Saved drawings ( {{ files.count }} found )
+    </legend>
+      {{#each files}}
+        <button class="btn btn-warn file-item col-sm-3">{{ filename }}</button>
+      {{/each}}
+  </fieldset>
+</template>
