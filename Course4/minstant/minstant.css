@@ -1,0 +1,51 @@
+/* CSS declarations go here */
+.chat-window{
+	border: 2px solid gray;
+	border-radius: 7px;
+	margin-bottom: 0px;
+}
+
+.user_avatar{
+	min-height:100px;
+	text-align: center;
+
+}
+.avatar_img{
+	height:75px;
+}
+
+.fullspace{
+	width:100%;
+	height: 100%;
+}
+.avatar{
+	height:50%;
+	width:100%;
+	border-left: 1px solid gray;
+	vertical-align: center;
+}
+.well-lg{
+	background: white;
+	vertical-align: center;
+	border-style: none;
+}
+
+.scrollable{
+	height:100%;
+	overflow: visible;
+}
+.chatSend, .chatMessage{
+	height:100%;
+	width: 100%;
+	border-top: 2px solid gray;
+}
+
+.border{
+	border:1px solid gray;
+}
+
+.noborder{
+	padding:0;
+	margin:0;
+	border-radius: none;
+}
